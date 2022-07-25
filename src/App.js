@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import JobFilter from "./components/JobFilter";
+import Jobs from "./components/Jobs";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <AppHeader>
+        <Header />
+      </AppHeader>
+      <AppNav>
+        <Nav />
+      </AppNav>
+      <AppMain>
+        <AppMainLeft>
+          <JobFilter />
+        </AppMainLeft>
+        <AppMainRight>
+          <Jobs />
+        </AppMainRight>
+      </AppMain>
+      <AppFooter>created by Ibrahim - devChallenges.io</AppFooter>
+    </AppContainer>
   );
 }
+
+const AppContainer = styled.div``;
+const AppHeader = styled.header``;
+const AppNav = styled.nav``;
+const AppMain = styled.main``;
+const AppMainLeft = styled.section``;
+const AppMainRight = styled.section``;
+const AppFooter = styled.footer``;
 
 export default App;
